@@ -4,7 +4,7 @@ namespace LaravelUac\Middleware;
 
 use Closure;
 use Illuminate\Support\Str;
-use LaravelUac\Uac;
+use LaravelUac\AccessControl;
 
 class UacAllow
 {
@@ -23,7 +23,7 @@ class UacAllow
             return Str::startsWith($middleware, $this->middlewarePrefix);
         })) {            
             $args = explode(',', str_replace($this->middlewarePrefix, '', $middleware));
-            Uac::allow($args);
+            AccessControl::allow($args);
         }
         
         return $next($request);

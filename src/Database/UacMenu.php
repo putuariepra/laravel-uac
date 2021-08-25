@@ -8,11 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class UacMenu extends Model
 {
     //
-    protected $table = 'acl_menu';
+    protected $table = 'uac_menu';
 
     public function roles()
     {        
-        return $this->belongsToMany(UacRole::class, 'acl_role_menu', 'menu_id', 'role_id');
+        return $this->belongsToMany(UacRole::class, 'uac_role_menu', 'menu_id', 'role_id');
     }
 
     protected static function boot()

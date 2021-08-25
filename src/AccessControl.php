@@ -4,7 +4,7 @@ namespace LaravelUac;
 
 use Illuminate\Support\Facades\Auth;
 
-class Uac
+class AccessControl
 {
     /**
      * Check permission.     
