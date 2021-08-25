@@ -1,0 +1,32 @@
+{
+    "name": "putuariepra/laravel-uac",
+    "description": "Laravel user access control based on role",
+    "autoload": {
+        "psr-4": {
+            "LaravelUac\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "putuariepra",
+            "email": "putuariepratama@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",        
+        "laravel/framework": ">=5.5"
+    },
+    "require-dev": {
+        "laravel/laravel": ">=5.5"        
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelUac\\UacServiceProvider"
+            ],
+            "aliases": {
+                "Uac": "LaravelUac\\Uac"
+            }
+        }
+    }
+}
