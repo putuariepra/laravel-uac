@@ -9,7 +9,7 @@ trait UacUser
     /**
      * Check if user has permission to pass through.     
      */
-    public function accesscontrol($role, $arguments = []): bool
+    public function accesscontrol($role): bool
     {
         if (empty($role)) {
             return true;
