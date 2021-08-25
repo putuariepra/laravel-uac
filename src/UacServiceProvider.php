@@ -9,8 +9,8 @@ use Illuminate\Support\ServiceProvider;
 class UacServiceProvider extends ServiceProvider
 {
     protected $routeMiddleware = [        
-        'uac.allow' => Middleware\UacAllow::class,
-        'uac.deny' => Middleware\UacDeny::class,
+        'auth.allow' => Middleware\UacAllow::class,
+        'auth.deny' => Middleware\UacDeny::class,
     ];
 
     /**
