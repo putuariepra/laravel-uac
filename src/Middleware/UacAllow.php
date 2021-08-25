@@ -8,7 +8,7 @@ use LaravelUac\Uac;
 
 class UacAllow
 {
-    protected $middlewarePrefix = 'uac.allow:';
+    protected $middlewarePrefix = 'auth.allow:';
 
     /**
      * Handle an incoming request.

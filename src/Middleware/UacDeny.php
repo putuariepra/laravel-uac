@@ -8,7 +8,7 @@ use LaravelUac\Uac;
 
 class UacDeny
 {
-    protected $middlewarePrefix = 'uac.deny:';
+    protected $middlewarePrefix = 'auth.deny:';
 
     /**
      * Handle an incoming request.
