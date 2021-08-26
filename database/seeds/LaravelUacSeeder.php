@@ -26,9 +26,9 @@ class LaravelUacSeeder extends Seeder
         $menu = UacMenu::create([
             'parent_id' => 0,
             'order' => 0,
-            'title' => 'Dashboard',
-            'icon' => 'fas fa-tachometer-alt',
-            'uri' => '/',
+            'title' => 'Home',
+            'icon' => 'fas fa-home',
+            'uri' => '/home',
         ]);
 
         $role = UacRole::create([
