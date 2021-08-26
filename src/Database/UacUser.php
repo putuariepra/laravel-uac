@@ -2,10 +2,13 @@
 
 namespace LaravelUac\Database;
 
+use LaravelUac\Database\UacMenu;
 use LaravelUac\Database\UacRole;
 
 trait UacUser
 {    
+    protected $__menu;
+
     /**
      * Check if user has permission to pass through.     
      */
@@ -57,6 +60,19 @@ trait UacUser
     public function roles()
     {
         return $this->belongsToMany(UacRole::class, 'uac_role_users', 'user_id', 'role_id');
+    }
+
+    /**
+     * User's Menu
+     */
+    public function menu()
+    {
+        if (!empty($this->__menu)) {
+            return $this->__menu;
+        }
+        
+        $menuModel = new UacMenu;
+        return $this->__menu = $menuModel->tree($this);
     }
 
     protected static function boot()
